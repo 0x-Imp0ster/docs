@@ -150,7 +150,7 @@ To configure the peer sections of the servers `wg0.conf` you will need the **pee
 
 Add the peer section to `wg0.conf` on the server like so:
 
-```
+```ini
 [Peer]
 # Peer A
 PublicKey = BkwYpR7w9tKhVEi66FfWqPHE9wg6MpQMS/ZKQuc6cRU=
@@ -165,7 +165,7 @@ Repeat this process for all required peers.
 
 Our example `wg0.conf` for the VPN server now looks like this
 
-```
+```ini
 [Interface]
 PrivateKey = KGo9ksNn1NUzugoOOJxcJmBPR6pmr9r+6fCpW8sYL3Y=
 Address = 10.10.10.1/24
@@ -216,7 +216,7 @@ As with the server config file, save this file in `/etc/wireguard` and call it `
 
 #### Interface Section
 
-```
+```ini
 [Interface]
 # Peer A
 PrivateKey = wA+Un72l07kJOKpO+csgncpdwJMbtnX5V29Y1Wcg+HU=
@@ -233,7 +233,7 @@ DNS = 10.10.10.1
 
 The peer for the client will be the VPN server.
 
-```
+```ini
 [Peer]
 # Server
 Endpoint = 178.62.123.123:51280
@@ -250,7 +250,7 @@ Repeat this process for all peers.
 
 The full config for Peer A will look like this:
 
-```
+```ini
 [Interface]
 # Peer A
 PrivateKey = wA+Un72l07kJOKpO+csgncpdwJMbtnX5V29Y1Wcg+HU=
